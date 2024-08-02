@@ -1,0 +1,53 @@
+#page-landing {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+
+  color: #212121;
+  font-family: Nunito, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-landing .content-wrapper {
+  max-width: 1100px;
+  height: 100%;
+  max-height: 680px;
+}
+
+#page-landing .content-wrapper main {
+  max-width: 350px;
+}
+
+#page-landing .content-wrapper main h1 {
+  font-size: 60px;
+  margin-top: 40px;
+}
+
+#page-landing .content-wrapper main p {
+  font-size: 24px;
+  line-height: 34px;
+  margin-top: 40px;
+}
+
+.content-wrapper .enter-partners {
+  width: 80px;
+  height: 80px;
+  background-color: #212121;
+  border-radius: 30px;
+  margin-top: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.content-wrapper .enter-partners:hover {
+  background-color: #a6a6a6;
+}
+
+.landing-image img {
+  width: 780px;
+}
