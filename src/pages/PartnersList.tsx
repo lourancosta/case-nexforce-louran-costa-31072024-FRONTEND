@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiPlus } from "react-icons/fi";
 
@@ -6,42 +6,25 @@ import nfLogo from "../images/nf-logo-white.png";
 
 import "../styles/global.css";
 import "../styles/pages/partners-list.css";
+import api from "../services/api";
+
+interface Partner {
+  id: string;
+  name: string;
+  city: string;
+  country: string;
+  phone: string;
+  domain: string;
+}
 
 function PartnerList() {
-  const homePartnershipRequests = [
-    {
-      id: 1,
-      name: "NexForce",
-      city: "São Paulo",
-      country: "Brasil",
-      phone: "123123123",
-      website: "nexforce.io",
-    },
-    {
-      id: 2,
-      name: "LAC",
-      city: "Vancouver",
-      country: "Canada",
-      phone: "321321321",
-      website: "lac.co",
-    },
-    {
-      id: 3,
-      name: "Meta",
-      city: "Menlo Park",
-      country: "Estados Unidos",
-      phone: "123123123",
-      website: "facebook.com",
-    },
-    {
-      id: 4,
-      name: "Google",
-      city: "Nova Iorque",
-      country: "Estados Unidos",
-      phone: "321321321",
-      website: "google.com",
-    },
-  ];
+  const [partners, setPartners] = useState<Partner[]>([]);
+
+  useEffect(() => {
+    api.get("/partners").then((response) => {
+      setPartners(response.data);
+    });
+  }, []);
 
   return (
     <div id="partners-list">
@@ -75,25 +58,25 @@ function PartnerList() {
             </thead>
 
             <tbody>
-              {homePartnershipRequests.map((currentPartnershipRequest) => {
+              {partners.map((partner) => {
                 return (
-                  // <Link to="/partners/66aa2db378f94279c9f0fbe2">
-                  <tr key={currentPartnershipRequest.id}>
+                  <tr key={partner.id}>
                     <td>
-                      <Link to="/partners/66aa2db378f94279c9f0fbe2">
-                        {currentPartnershipRequest.name}
-                      </Link>
+                      <Link to={`/partners/${partner.id}`}>{partner.name}</Link>
                     </td>
-                    <td>{currentPartnershipRequest.city}</td>
-                    <td>{currentPartnershipRequest.country}</td>
-                    <td>{currentPartnershipRequest.phone}</td>
+                    <td>{partner.city}</td>
+                    <td>{partner.country}</td>
+                    <td>{partner.phone}</td>
                     <td>
-                      <a href="https://{currentPartnershipRequest.website}">
-                        {currentPartnershipRequest.website}
+                      <a
+                        target="_blank"
+                        href={`https://${partner.domain}`}
+                        rel="noreferrer"
+                      >
+                        {partner.domain}
                       </a>
                     </td>
                   </tr>
-                  // </Link>
                 );
               })}
             </tbody>
