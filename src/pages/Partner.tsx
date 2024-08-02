@@ -63,6 +63,15 @@ export default function GetPartner() {
     navigate("/partners");
   }
 
+  async function handleDelete(event: FormEvent) {
+    event.preventDefault();
+
+    await api.delete(`/partners/${params.id}`);
+
+    alert("Parceiro deletado com sucesso!");
+    navigate("/partners");
+  }
+
   return (
     <div id="page-infos-partner">
       <Sidebar></Sidebar>
@@ -125,7 +134,11 @@ export default function GetPartner() {
             Atualizar
           </button>
 
-          <button className="delete-button" type="submit">
+          <button
+            className="delete-button"
+            type="submit"
+            onClick={handleDelete}
+          >
             Deletar
           </button>
         </form>
