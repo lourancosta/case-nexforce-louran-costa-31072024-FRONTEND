@@ -5,6 +5,7 @@ Este repositório destina-se a entrega do frontend do case NexForce.
 O CRUD se refere a uma plataforma para cadastro e gerenciamento de parceiros, onde usuários poderão registar interesse se tornar um parceiro NexForce. Neste repositório encontra-se o código destinado ao ao back-end da aplicação.
 
 Para conseguir realizar as operações na aplicação é necessário inicializar o backend, para isso consulte o repositório abaixo:
+
 [Inicializardo o backend](https://github.com/lourancosta/case-nexforce-louran-costa-31072024-BACKEND)
 
 ## Como Executar o Projeto
