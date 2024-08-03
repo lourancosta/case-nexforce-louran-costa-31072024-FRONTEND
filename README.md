@@ -1,4 +1,4 @@
-# Case-NexForce-Louran-Costa-31072024 BACKEND
+# Case-NexForce-Louran-Costa-31072024 FRONTEND
 
 Este repositório destina-se a entrega do frontend do case NexForce.
 
