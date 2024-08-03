@@ -6,6 +6,20 @@ O CRUD se refere a uma plataforma para cadastro e gerenciamento de parceiros, on
 
 ## Como Executar o Projeto
 
+No desenvolvimento foi utilizado yarn como geenciador de pacotes.
+
+Inicialize o projeto
+
+```
+npm init
+```
+
+Instale as dependencias do projeto:
+
+```
+npm install
+```
+
 Acesse a raiz do repositório do projeto, em seguida execute o comando:
 
 ```
