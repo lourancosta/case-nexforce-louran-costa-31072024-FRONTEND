@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Prints Aplicação
+
+## Página Inicial 
+![](https://raw.githubusercontent.com/MateusMaciel340/aluraplay/main/assets/aluraplay.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
