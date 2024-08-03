@@ -8,7 +8,9 @@ O CRUD se refere a uma plataforma para cadastro e gerenciamento de parceiros, on
 
 Acesse a raiz do repositório do projeto, em seguida execute o comando:
 
-### `yarn start`
+```
+yarn start
+```
 
 ## Imagens da Aplicação
 
