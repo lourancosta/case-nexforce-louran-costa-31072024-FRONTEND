@@ -4,8 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Prints Aplicação
 
-## Página Inicial 
+## Imagens da Aplicação 
 <img src="/app_screens/pagina-inicial.png">
+<img src="/app_screens/listagem-parceiros.png">
+<img src="/app_screens/cadastro-parceiro.png">
+<img src="/app_screens/atualizar-deletar-parceiro.png">
+<img src="/app_screens/filtro-parceiros.png">
 
 ## Available Scripts
 
