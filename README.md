@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Prints Aplicação
 
 ## Página Inicial 
-![](https://raw.githubusercontent.com/MateusMaciel340/aluraplay/main/assets/aluraplay.gif)
+<img src="/app_screens/pagina-inicial.png">
 
 ## Available Scripts
 
