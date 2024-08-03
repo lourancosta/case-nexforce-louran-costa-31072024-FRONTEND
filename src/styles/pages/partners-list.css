@@ -124,3 +124,9 @@ tbody tr:hover {
 tbody td {
   padding: 16px;
 }
+
+.company-name a,
+.company-domain a {
+  text-decoration: none;
+  color: #0000ee;
+}

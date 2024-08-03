@@ -75,13 +75,13 @@ function PartnerList() {
               {partnerSearched.map((partner) => {
                 return (
                   <tr key={partner.id}>
-                    <td>
+                    <td className="company-name">
                       <Link to={`/partners/${partner.id}`}>{partner.name}</Link>
                     </td>
                     <td>{partner.city}</td>
                     <td>{partner.country}</td>
                     <td>{partner.phone}</td>
-                    <td>
+                    <td className="company-domain">
                       <a
                         target="_blank"
                         href={`https://${partner.domain}`}
