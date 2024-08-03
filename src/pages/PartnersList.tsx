@@ -19,12 +19,17 @@ interface Partner {
 
 function PartnerList() {
   const [partners, setPartners] = useState<Partner[]>([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     api.get("/partners").then((response) => {
       setPartners(response.data);
     });
   }, []);
+
+  let partnerSearched = partners.filter((partner) =>
+    partner.name.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div id="partners-list">
@@ -43,6 +48,15 @@ function PartnerList() {
       <div id="board-list">
         <section id="board-list-header">
           <h1>Encontre um Parceiro</h1>
+          <form>
+            <label>Filtrar:</label>
+            <input
+              type="text"
+              placeholder="Nome da empresa"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+            />
+          </form>
         </section>
 
         <section id="board-list-table">
@@ -58,7 +72,7 @@ function PartnerList() {
             </thead>
 
             <tbody>
-              {partners.map((partner) => {
+              {partnerSearched.map((partner) => {
                 return (
                   <tr key={partner.id}>
                     <td>

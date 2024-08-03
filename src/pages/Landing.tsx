@@ -14,8 +14,8 @@ function Landing() {
       <div className="content-wrapper">
         <img src={logoImg} alt="NexForce" />
         <main>
-          <h1>NexForce Partner Program</h1>
-          <p>Veja quais empresas são parceiras NexForce credenciadas</p>
+          <h1>Programa de Parcerias</h1>
+          <p>Veja quais empresas são parceiras credenciadas NexForce</p>
           <Link to="/partners" className="enter-partners">
             <FiArrowRight size={26} color="white" />
           </Link>

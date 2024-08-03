@@ -55,20 +55,31 @@ export default function GetPartner() {
       country: country,
     };
 
-    await api.patch(`/partners/${params.id}`, JSON.stringify(data), {
-      headers: { "Content-Type": "application/json" },
-    });
+    try {
+      await api.patch(`/partners/${params.id}`, JSON.stringify(data), {
+        headers: { "Content-Type": "application/json" },
+      });
+      alert("Cadastro atualizado com sucesso!");
+    } catch (error) {
+      alert(
+        "Não foi possível atualizar o cadastro. Por favor, tente mais tarde."
+      );
+    }
 
-    alert("Cadastro atualizado com sucesso!");
     navigate("/partners");
   }
 
   async function handleDelete(event: FormEvent) {
     event.preventDefault();
 
-    await api.delete(`/partners/${params.id}`);
-
-    alert("Parceiro deletado com sucesso!");
+    try {
+      await api.delete(`/partners/${params.id}`);
+      alert("Parceiro deletado com sucesso!");
+    } catch (error) {
+      alert(
+        "Não foi possível realizar a exclusão. Por favor, tente mais tarde."
+      );
+    }
     navigate("/partners");
   }
 

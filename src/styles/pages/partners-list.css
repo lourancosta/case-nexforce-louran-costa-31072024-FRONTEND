@@ -1,3 +1,20 @@
+#board-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#board-list-header form label {
+  font-size: 24px;
+  margin-right: 16px;
+}
+
+#board-list-header form input {
+  padding: 12px 16px;
+  width: 360px;
+  border-radius: 16px;
+}
+
 #partners-list {
   width: 100vw;
   height: 100vh;
